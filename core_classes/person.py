@@ -21,10 +21,11 @@ class Person:
     @staticmethod
     def save_to_file():
 
-        if not os.path.isfile('people.txt'):
-            file = open('people.txt', 'a')
-            file.writelines('First_Name \t\t' + 'Last_Name \t\t' + 'Age \t\t' + 'Gender \t\t' + 'ID_Num \n')
+        full_path = 'C:\\Users\\Raicho\\Desktop\\work Final project\\outputs'
 
+        if not os.path.isfile(full_path + '/people.txt'):
+            file = open(full_path + '/people.txt', 'a')
+            file.writelines('First_Name \t\t' + 'Last_Name \t\t' + 'Age \t\t' + 'Gender \t\t' + 'ID_Num \n')
 
             for person in Person.people:
                 file.write(person.first_name + '\t\t\t')
@@ -37,7 +38,7 @@ class Person:
             file.close()
 
         else:
-            file = open('people.txt', 'a')
+            file = open(full_path + '/people.txt', 'a')
 
             for person in Person.people:
                 file.write(person.first_name + '\t\t\t')
