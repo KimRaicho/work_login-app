@@ -1,4 +1,4 @@
-import person as p
+from core_classes import person as p
 
 
 class Admin(p.Person):
@@ -11,5 +11,11 @@ class Admin(p.Person):
         self.admin_username = admin_username
         self.admin_pin = admin_pin
 
-    def admin_login_details(self):
+        Admin.login_details = {self.admin_username: self.admin_pin}
+        Admin.admin_login_save_to_file(self)
+
+    @staticmethod
+    def admin_login_save_to_file(self):
+        full_path = '/outputs'
+
         pass
