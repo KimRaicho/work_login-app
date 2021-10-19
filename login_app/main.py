@@ -1,26 +1,5 @@
-from core_classes import person as p
 from inherited_classes import user as u
-
-
-def create_person():
-    print("Enter first name: ")
-    f_name = input()
-    print("Enter last name: ")
-    l_name = input()
-    print("Enter age: ")
-    age = int(input())
-    print("Enter gender (M - male or F - female): ")
-    gender = input()
-    print("Enter id number: ")
-    id_number = int(input())
-
-    if gender == 'm' or gender == 'M':
-        gender = 'Male'
-    else:
-        gender = 'Female'
-
-    p.Person(f_name, l_name, gender, age, id_number)
-    p.Person.save_to_file()
+from inherited_classes import admin as a
 
 
 def create_user():
@@ -47,8 +26,51 @@ def create_user():
     u.User(f_name, l_name, gender, username, password, age, id_number)
 
 
-if __name__ == '__main__':
-    # create_person()
-    # print(f'\n Person Created: {p.Person.people}')
+def create_admin():
+    print("Enter first name: ")
+    f_name = input()
+    print("Enter last name: ")
+    l_name = input()
+    print("Enter age: ")
+    age = int(input())
+    print("Enter gender (M - male or F - female): ")
+    gender = input()
+    print("Enter id number: ")
+    id_number = int(input())
+    print("Enter Username: ")
+    username = input()
+    print("Enter Password: ")
+    password = input()
 
-    create_user()
+    if gender == 'm' or gender == 'M':
+        gender = 'Male'
+    else:
+        gender = 'Female'
+
+    a.Admin(f_name, l_name, gender, username, password, age, id_number)
+
+
+def menu():
+    print('=======================ROBOT APPLICATION========================')
+
+    option = 0
+
+    while option != 3:
+        print('''
+1. USER
+2. ADMIN
+3. QUIT ''')
+
+        print(f'option: ')
+        option = int(input())
+
+        if option == 1:
+            create_user()
+        elif option == 2:
+            create_admin()
+        else:
+            print('GOODBYE!')
+
+
+if __name__ == '__main__':
+    menu()

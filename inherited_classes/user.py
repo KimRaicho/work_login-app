@@ -13,16 +13,17 @@ class User(p.Person):
         self.password = password
 
         User.login_details = {self.username: self.password}
-        User.user_login_save_to_file(self)
+        User.user_login_save_to_file()
+
 
     @staticmethod
-    def user_login_save_to_file(self):
-        full_path = '/outputs'
+    def user_login_save_to_file():
+        full_path = 'C:\\Users\\Raicho\\Desktop\\work Final project\\outputs'
 
         if not os.path.isfile(full_path + '/user_login.txt'):
             file = open(full_path + '/user_login.txt', 'a')
             file.writelines('USERNAME \t\t' + 'PASSWORD \n')
 
-            for username, password in User.login_details:
+            for username, password in User.login_details.items():
                 file.write(username + '\t\t\t')
                 file.write(password + '\t\t\t')
