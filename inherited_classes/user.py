@@ -15,7 +15,6 @@ class User(p.Person):
         User.login_details = {self.username: self.password}
         User.user_login_save_to_file()
 
-
     @staticmethod
     def user_login_save_to_file():
         full_path = 'C:\\Users\\Raicho\\Desktop\\work Final project\\outputs'
@@ -27,3 +26,16 @@ class User(p.Person):
             for username, password in User.login_details.items():
                 file.write(username + '\t\t\t')
                 file.write(password + '\t\t\t')
+
+    # TODO: Create online server and create parameter to show whether its reachable or not
+    @staticmethod
+    def user_login_save_to_server():
+        server = 'online'  # check if server is online
+
+        if server is 'online':
+            print('Saving Online....')
+            # TODO: Allow access to server
+            # TODO: Save files to server
+        else:
+            # TODO: Reload to check server connection
+            print('Offline. Connect to Internet')

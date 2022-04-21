@@ -3,20 +3,13 @@ from inherited_classes import admin as a
 
 
 def create_user():
-    print("Enter first name: ")
-    f_name = input()
-    print("Enter last name: ")
-    l_name = input()
-    print("Enter age: ")
-    age = int(input())
-    print("Enter gender (M - male or F - female): ")
-    gender = input()
-    print("Enter id number: ")
-    id_number = int(input())
-    print("Enter Username: ")
-    username = input()
-    print("Enter Password: ")
-    password = input()
+    f_name = input("Enter first name: ")
+    l_name = input("Enter last name: ")
+    age = int(input("Enter age: "))
+    gender = input("Enter gender (M - male or F - female): ")
+    id_number = int(input("Enter id number: "))
+    username = input("Enter Username: ")
+    password = input("Enter Password: ")
 
     if gender == 'm' or gender == 'M':
         gender = 'Male'
@@ -27,20 +20,13 @@ def create_user():
 
 
 def create_admin():
-    print("Enter first name: ")
-    f_name = input()
-    print("Enter last name: ")
-    l_name = input()
-    print("Enter age: ")
-    age = int(input())
-    print("Enter gender (M - male or F - female): ")
-    gender = input()
-    print("Enter id number: ")
-    id_number = int(input())
-    print("Enter Username: ")
-    username = input()
-    print("Enter Password: ")
-    password = input()
+    f_name = input("Enter first name: ")
+    l_name = input("Enter last name: ")
+    age = int(input("Enter age: "))
+    gender = input("Enter gender (M - male or F - female): ")
+    id_number = int(input("Enter id number: "))
+    username = input("Enter Username: ")
+    password = input("Enter Password: ")
 
     if gender == 'm' or gender == 'M':
         gender = 'Male'
